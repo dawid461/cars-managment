@@ -5,21 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Nowy samochód" Height="223.15" Width="325.343">
+        Title="Nowy samochód" Height="388.355" Width="325.343">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="43*"/>
-            <ColumnDefinition Width="274*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Kolor" HorizontalAlignment="Left" Margin="23.151,11,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.525,0.521" Grid.Column="1"/>
         <Label Content="Rok produkcji" HorizontalAlignment="Left" Margin="21,41,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label Content="Rodzaj paliwa" HorizontalAlignment="Left" Margin="22,78,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label Content="Model" HorizontalAlignment="Left" Margin="17.151,118,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="ColorTxt" HorizontalAlignment="Left" Height="23" Margin="67.151,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="ProductionYearTxt" HorizontalAlignment="Left" Height="23" Margin="67.151,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <ComboBox x:Name="FuelTypeCmb" HorizontalAlignment="Left" Margin="67.151,78,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <ComboBox x:Name="ModelCmb" HorizontalAlignment="Left" Margin="67.151,118,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <Button x:Name="SaveButton" Content="Dodaj" HorizontalAlignment="Left" Margin="81.151,145,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="SaveButton_Click"/>
+        <TextBox x:Name="ColorTxt" HorizontalAlignment="Left" Height="23" Margin="118,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ProductionYearTxt" HorizontalAlignment="Left" Height="23" Margin="118,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="FuelTypeCmb" HorizontalAlignment="Left" Margin="118,78,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ModelCmb" HorizontalAlignment="Left" Margin="118,118,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="SaveButton" Content="Dodaj" HorizontalAlignment="Left" Margin="103,323,0,0" VerticalAlignment="Top" Width="75" Click="SaveButton_Click"/>
+        <ListBox x:Name="AccessoriesLst" HorizontalAlignment="Left" Height="84" Margin="118,156,0,0" VerticalAlignment="Top" Width="112"/>
+        <Label Content="Akcesoria" HorizontalAlignment="Left" Margin="23,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.431,0.443"/>
+        <TextBox x:Name="AccessoryTxt" HorizontalAlignment="Left" Height="23" Margin="118,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"/>
+        <Button x:Name="AddAccessoryButton" Content="Dodaj el. wyposażenia" HorizontalAlignment="Left" Margin="86,273,0,0" VerticalAlignment="Top" Width="144" Click="AddAccessoryButton_Click"/>
 
     </Grid>
 </Window>

@@ -28,11 +28,32 @@ namespace WpfApp1
         {
             InitializeComponent();
             ModelCmb.ItemsSource = carsEntities.Model.ToList();
+            FuelTypeCmb.Items.Add("Diesel");
+            FuelTypeCmb.Items.Add("LPG");
+            FuelTypeCmb.Items.Add("Benzyna");
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            Car car = new Car();
+            car.Model = (Model) ModelCmb.SelectedItem;
+            car.FuelType = (string) FuelTypeCmb.SelectedItem;
+            car.ProductionYear = Int32.Parse(ProductionYearTxt.Text);
+            car.Color = ColorTxt.Text;
+            AccessoriesLst.Items.Cast<string>().ToList().ForEach(accessoryName =>
+            {
+                Accessory accessory = new Accessory();
+                accessory.Name = accessoryName;
+                car.Accessory.Add(accessory);
+            });
+            carsEntities.Car.Add(car);
+            carsEntities.SaveChanges();
+            Close();
+        }
 
+        private void AddAccessoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            AccessoriesLst.Items.Add(AccessoryTxt.Text);
         }
     }
 }

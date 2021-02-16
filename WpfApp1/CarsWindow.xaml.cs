@@ -52,6 +52,7 @@ namespace WpfApp1
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             new NewCarWindow().ShowDialog();
+            UpdateDataGrid();
         }
     }
 }

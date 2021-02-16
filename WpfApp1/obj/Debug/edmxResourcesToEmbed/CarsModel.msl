@@ -6,8 +6,6 @@
         <MappingFragment StoreEntitySet="Accessory">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Car_Id" ColumnName="Car_Id" />
         </MappingFragment>
       </EntityTypeMapping>

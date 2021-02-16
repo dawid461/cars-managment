@@ -6,8 +6,6 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="Price" Type="int" Nullable="false" />
-    <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Car_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Car">
