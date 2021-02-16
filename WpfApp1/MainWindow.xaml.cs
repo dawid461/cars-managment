@@ -24,5 +24,15 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Obsługa kliknięcia przycisku "Samochody"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CarsButton_Click(object sender, RoutedEventArgs e)
+        {
+            new CarsWindow().ShowDialog();
+        }
     }
 }

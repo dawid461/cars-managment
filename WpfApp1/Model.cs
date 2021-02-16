@@ -29,5 +29,10 @@ namespace WpfApp1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Car> Car { get; set; }
         public virtual Make Make { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}", Make.Name, Name);
+        }
     }
 }

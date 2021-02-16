@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" Height="319" Margin="10,31,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="2"/>
         <Label Content="Wszystkie samochody" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Button x:Name="DeleteButton" Content="Usuń" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
-        <Button x:Name="AddButton" Content="Dodaj" HorizontalAlignment="Left" Margin="46.012,355,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Button x:Name="DeleteButton" Content="Usuń" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="DeleteButton_Click"/>
+        <Button x:Name="AddButton" Content="Dodaj" HorizontalAlignment="Left" Margin="46.012,355,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="AddButton_Click"/>
     </Grid>
 </Window>

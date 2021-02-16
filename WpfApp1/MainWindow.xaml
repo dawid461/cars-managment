@@ -10,7 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="203*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="CarsButton" Content="Samochody" HorizontalAlignment="Left" Margin="88,40,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="CarsButton" Content="Samochody" HorizontalAlignment="Left" Margin="88,40,0,0" VerticalAlignment="Top" Width="75" Click="CarsButton_Click"/>
         <Button x:Name="MakesButton" Content="Marki" HorizontalAlignment="Left" Margin="88,65,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="ModelsButton" Content="Modele" HorizontalAlignment="Left" Margin="88,90,0,0" VerticalAlignment="Top" Width="75"/>
 
