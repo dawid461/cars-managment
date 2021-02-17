@@ -34,5 +34,10 @@ namespace WpfApp1
         {
             new CarsWindow().ShowDialog();
         }
+
+        private void MakesButton_Click(object sender, RoutedEventArgs e)
+        {
+            new MakesWindow().ShowDialog();
+        }
     }
 }
