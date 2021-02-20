@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Dawid Czuba\Desktop\uczelnia\studia 2 rok\projekt c# 2021\cars-managment\WpfAppCars\WpfApp1\App.xaml
-3256845334
+7861003992
 21722706801
-15-356898605
+19-1858961058
 18-917162334
-CarsWindow.xaml;MainWindow.xaml;NewCarWindow.xaml;
+CarsWindow.xaml;MainWindow.xaml;MakesWindow.xaml;ModelsWindow.xaml;NewCarWindow.xaml;NewMakeWindow.xaml;NewModelWindow.xaml;
 
 False
 

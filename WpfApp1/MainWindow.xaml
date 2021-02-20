@@ -7,12 +7,16 @@
         mc:Ignorable="d"
         Title="Menu" Height="230.548" Width="247.671">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="21*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="203*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="CarsButton" Content="Samochody" HorizontalAlignment="Left" Margin="88,40,0,0" VerticalAlignment="Top" Width="75" Click="CarsButton_Click"/>
-        <Button x:Name="MakesButton" Content="Marki" HorizontalAlignment="Left" Margin="88,65,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="ModelsButton" Content="Modele" HorizontalAlignment="Left" Margin="88,90,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="MakesButton" Content="Marki" HorizontalAlignment="Left" Margin="88,65,0,0" VerticalAlignment="Top" Width="75" Click="MakesButton_Click"/>
+        <Button x:Name="ModelsButton" Content="Modele" HorizontalAlignment="Left" Margin="88,90,0,0" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Click="ModelsButton_Click"/>
 
     </Grid>
 </Window>

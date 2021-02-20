@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Dawid Czuba\Desktop\uczelnia\studia 2 rok\projekt c# 2021\cars-managment\WpfAppCars\WpfApp1\obj\Debug\
+C:\Users\Dawid Czuba\Desktop\uczelnia\studia 2 rok\projekt c# 2021\projekt c# wysyłanie\projekt do wyslania c# 2021\WpfAppCars\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\Dawid Czuba\Desktop\uczelnia\studia 2 rok\projekt c# 2021\cars-managment\WpfAppCars\WpfApp1\App.xaml
-3256845334
+C:\Users\Dawid Czuba\Desktop\uczelnia\studia 2 rok\projekt c# 2021\projekt c# wysyłanie\projekt do wyslania c# 2021\WpfAppCars\WpfApp1\App.xaml
+7861003992
 21722706801
-14485460762
-18-917162334
-CarsWindow.xaml;MainWindow.xaml;NewCarWindow.xaml;
+18-1016601691
+181951556106
+CarsWindow.xaml;MainWindow.xaml;MakesWindow.xaml;ModelsWindow.xaml;NewCarWindow.xaml;NewMakeWindow.xaml;NewModelWindow.xaml;
 
 False
 

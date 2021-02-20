@@ -11,7 +11,16 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" Height="319" Margin="10,31,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="2" IsReadOnly="True"/>
+        <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" Height="319" Margin="10,31,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="2" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding  Id}"/>
+                <DataGridTextColumn Header="Model" Binding="{Binding Model}"/>
+                <DataGridTextColumn Header="Rok produkcji" Binding="{Binding  ProductionYear}"/>
+                <DataGridTextColumn Header="Kolor" Binding="{Binding  Color}"/>
+                <DataGridTextColumn Header="Typ paliwa" Binding="{Binding  FuelType}"/>
+                <DataGridTextColumn Header="Akcesoria" Binding="{Binding  AccessoriesSummary}"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <Label Content="Wszystkie samochody" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Button x:Name="DeleteButton" Content="Usuń" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="DeleteButton_Click"/>
         <Button x:Name="AddButton" Content="Dodaj" HorizontalAlignment="Left" Margin="46.012,355,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="AddButton_Click"/>

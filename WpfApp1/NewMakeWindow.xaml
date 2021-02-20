@@ -13,7 +13,7 @@
         <ComboBox x:Name="CountryCmb" HorizontalAlignment="Left" Margin="99,45,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="NameTxt" HorizontalAlignment="Left" Height="23" Margin="99,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="FoundationYearTxt" HorizontalAlignment="Left" Height="23" Margin="99,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="AddButton" Content="Dodaj" HorizontalAlignment="Left" Margin="79,116,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="AddButton" Content="Dodaj" HorizontalAlignment="Left" Margin="79,116,0,0" VerticalAlignment="Top" Width="75" Click="SaveButton_Click"/>
 
     </Grid>
 </Window>

@@ -44,6 +44,15 @@ namespace WpfApp1
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             Make make = (Make)DataGrid.SelectedItem;
+            make.Model.ToList().ForEach(m =>
+            {
+                m.Car.ToList().ForEach(c => {
+                    c.Accessory.ToList().ForEach(a => carsEntities.Accessory.Remove(a));
+                    carsEntities.Car.Remove(c);
+                });
+                carsEntities.Model.Remove(m);
+            });
+           
             carsEntities.Make.Remove(make);
             carsEntities.SaveChanges();
             UpdateDataGrid();

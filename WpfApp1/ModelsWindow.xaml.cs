@@ -15,45 +15,49 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Logika interakcji dla klasy CarsWindow.xaml
+    /// Logika interakcji dla klasy ModelsWindow.xaml
     /// </summary>
-    public partial class CarsWindow : Window
+    public partial class ModelsWindow : Window
     {
-       /// <summary>
-       /// Odwołanie do bazy danych
-       /// </summary>
+        /// <summary>
+        /// Odwołanie do bazy danych
+        /// </summary>
         private CarsEntities carsEntities = new CarsEntities();
 
         /// <summary>
         /// Konstruktor okna
         /// </summary>
-        public CarsWindow()
+        public ModelsWindow()
         {
             InitializeComponent();
             UpdateDataGrid();
         }
 
         /// <summary>
-        /// Aktualizacja tabeli samochodów.
+        /// Aktualizacja tabeli modeli.
         /// </summary>
         private void UpdateDataGrid()
         {
-            DataGrid.ItemsSource = carsEntities.Car.ToList();
+            DataGrid.ItemsSource = carsEntities.Model.ToList();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            Car car = (Car) DataGrid.SelectedItem;
-            car.Accessory.ToList().ForEach(a => carsEntities.Accessory.Remove(a));
-            carsEntities.Car.Remove(car);
+            Model model = (Model) DataGrid.SelectedItem;
+            model.Car.ToList().ForEach(c => {
+                c.Accessory.ToList().ForEach(a => carsEntities.Accessory.Remove(a));
+                carsEntities.Car.Remove(c);
+            });
+            carsEntities.Model.Remove(model);
             carsEntities.SaveChanges();
             UpdateDataGrid();
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            new NewCarWindow().ShowDialog();
+            new NewModelWindow().ShowDialog();
             UpdateDataGrid();
         }
+
     }
 }

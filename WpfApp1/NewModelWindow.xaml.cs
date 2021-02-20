@@ -15,33 +15,31 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Logika interakcji dla klasy NewMakeWindow.xaml
+    /// Logika interakcji dla klasy NewModelWindow.xaml
     /// </summary>
-    public partial class NewMakeWindow : Window
+    public partial class NewModelWindow : Window
     {
         /// <summary>
         /// Odwołanie do bazy danych
         /// </summary>
         private CarsEntities carsEntities = new CarsEntities();
 
-        public NewMakeWindow()
+        public NewModelWindow()
         {
             InitializeComponent();
-            CountryCmb.Items.Add("Włochy");
-            CountryCmb.Items.Add("Japonia");
-            CountryCmb.Items.Add("Korea");
-            CountryCmb.Items.Add("Niemcy");
+            MakeCmb.ItemsSource = carsEntities.Make.ToList();
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Make make = new Make();
-                make.Name = NameTxt.Text;
-                make.FoundationYear= Int32.Parse(FoundationYearTxt.Text);
-                make.Country = CountryCmb.Text;
-                carsEntities.Make.Add(make);
+                Model model = new Model();
+                model.Make = (Make)MakeCmb.SelectedItem;
+                model.HorsePower = Int32.Parse(HorsePowerTxt.Text);
+                model.EngineCapacity = Int32.Parse(EngineCapacityTxt.Text);
+                model.Name = NameTxt.Text;
+                carsEntities.Model.Add(model);
                 carsEntities.SaveChanges();
                 Close();
             }

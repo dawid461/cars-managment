@@ -39,5 +39,10 @@ namespace WpfApp1
         {
             new MakesWindow().ShowDialog();
         }
+
+        private void ModelsButton_Click(object sender, RoutedEventArgs e)
+        {
+            new ModelsWindow().ShowDialog();
+        }
     }
 }

@@ -7,9 +7,16 @@
         mc:Ignorable="d"
         Title="MakesWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" Height="374" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
-        <Button x:Name="DeleteButton" Content="Usuń" HorizontalAlignment="Left" Margin="12,389,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="AddButton" Content="Dodaj" HorizontalAlignment="Left" Margin="92,389,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" Height="374" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+            <DataGridTextColumn Header="Id" Binding="{Binding  Id}"/>
+            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+            <DataGridTextColumn Header="Kraj" Binding="{Binding  Country}"/>
+            <DataGridTextColumn Header="Rok założenia" Binding="{Binding  FoundationYear}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="DeleteButton" Content="Usuń" HorizontalAlignment="Left" Margin="12,389,0,0" VerticalAlignment="Top" Width="75" Click="DeleteButton_Click"/>
+        <Button x:Name="AddButton" Content="Dodaj" HorizontalAlignment="Left" Margin="92,389,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click"/>
 
     </Grid>
 </Window>

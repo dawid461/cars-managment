@@ -107,20 +107,48 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MakesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModelsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="NewCarWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewMakeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewModelWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Make.cs">
       <DependentUpon>CarsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MakesWindow.xaml.cs">
+      <DependentUpon>MakesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model.cs">
       <DependentUpon>CarsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModelsWindow.xaml.cs">
+      <DependentUpon>ModelsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NewCarWindow.xaml.cs">
       <DependentUpon>NewCarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewMakeWindow.xaml.cs">
+      <DependentUpon>NewMakeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewModelWindow.xaml.cs">
+      <DependentUpon>NewModelWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

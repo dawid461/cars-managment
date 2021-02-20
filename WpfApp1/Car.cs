@@ -11,7 +11,8 @@ namespace WpfApp1
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Car
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,5 +30,7 @@ namespace WpfApp1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Accessory> Accessory { get; set; }
         public virtual Model Model { get; set; }
+
+        public string AccessoriesSummary => String.Join(", ", Accessory.Select(a => a.Name));
     }
 }
